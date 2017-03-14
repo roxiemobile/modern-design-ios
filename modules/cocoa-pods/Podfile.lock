@@ -1,6 +1,6 @@
 PODS:
   - MBProgressHUD (0.9.2)
-  - ModernDesign (0.4.0):
+  - ModernDesign (0.7.2):
     - MBProgressHUD (~> 0.9)
     - PureLayout (~> 3.0)
     - SwiftCommons (~> 0.7.2)
@@ -27,7 +27,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  ModernDesign: 0de0580986f0430bdc7ad7c1ca9f1f6139427d3f
+  ModernDesign: 2b98afbd8413bf198da6671401e00cb2b42f754b
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SwiftCommons: 667b717e565a317c6cb2f82398e70feb15681455
   SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
