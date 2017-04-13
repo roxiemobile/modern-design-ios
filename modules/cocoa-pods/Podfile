@@ -7,6 +7,10 @@ project '../modern-design/ModernDesign.xcodeproj'
 workspace '../modern-design/ModernDesign.xcworkspace'
 
 target 'ModernDesignTests' do
-  pod 'SwiftCommons', git: 'https://github.com/roxiemobile/swift-commons.ios.git', tag: '0.7.2'
+ # pod 'SwiftCommons', git: 'https://github.com/roxiemobile/swift-commons.ios.git', tag: '0.7.2'
+
+ pod 'SwiftCommons', :git => 'https://github.com/NSemakov/swift-commons.ios',
+  					 :branch => 'feature/Swift3.0'
+
   pod 'ModernDesign', path: '../../'
 end

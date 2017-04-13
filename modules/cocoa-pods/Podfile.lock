@@ -3,35 +3,35 @@ PODS:
   - ModernDesign (0.7.2):
     - MBProgressHUD (~> 0.9)
     - PureLayout (~> 3.0)
-    - SwiftCommons (~> 0.7.2)
+    - SwiftCommons
   - PureLayout (3.0.2)
   - SwiftCommons (0.7.2):
-    - SwiftyJSON (~> 2.4)
-  - SwiftyJSON (2.4.0)
+    - SwiftyJSON (~> 3.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - ModernDesign (from `../../`)
-  - SwiftCommons (from `https://github.com/roxiemobile/swift-commons.ios.git`, tag `0.7.2`)
+  - SwiftCommons (from `https://github.com/NSemakov/swift-commons.ios`, branch `feature/Swift3.0`)
 
 EXTERNAL SOURCES:
   ModernDesign:
-    :path: "../../"
+    :path: ../../
   SwiftCommons:
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-    :tag: 0.7.2
+    :branch: feature/Swift3.0
+    :git: https://github.com/NSemakov/swift-commons.ios
 
 CHECKOUT OPTIONS:
   SwiftCommons:
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-    :tag: 0.7.2
+    :commit: 92aba9db8f280fb3bcac97b7b95eed5af180e222
+    :git: https://github.com/NSemakov/swift-commons.ios
 
 SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  ModernDesign: 2b98afbd8413bf198da6671401e00cb2b42f754b
+  ModernDesign: 39015f0993d7653ff0c45b9ca57ca982cc940749
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SwiftCommons: 667b717e565a317c6cb2f82398e70feb15681455
-  SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
+  SwiftCommons: 98c0fde9cfdc6b27d77ff12574abbc3180837346
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f6c3b4e94642c5980cb90b53143016c05d4a5fa0
+PODFILE CHECKSUM: 042a8514179ecb42f4fceda22d32c0cac44043d4
 
 COCOAPODS: 1.1.1

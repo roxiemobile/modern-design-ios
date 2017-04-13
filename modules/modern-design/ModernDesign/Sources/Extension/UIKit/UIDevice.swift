@@ -16,42 +16,42 @@ extension UIDevice
 {
 // MARK: - Methods
 
-    public static func systemVersionEqualTo(version: String) -> Bool {
-        return UIDevice.currentDevice().systemVersion.compare(version, options: .NumericSearch) == .OrderedSame
+    public static func systemVersionEqualTo(_ version: String) -> Bool {
+        return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedSame
     }
 
-    public static func systemVersionGreaterThan(version: String) -> Bool {
-        return UIDevice.currentDevice().systemVersion.compare(version, options: .NumericSearch) == .OrderedDescending
+    public static func systemVersionGreaterThan(_ version: String) -> Bool {
+        return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedDescending
     }
 
-    public static func systemVersionGreaterThanOrEqualTo(version: String) -> Bool {
-        return UIDevice.currentDevice().systemVersion.compare(version, options: .NumericSearch) != .OrderedAscending
+    public static func systemVersionGreaterThanOrEqualTo(_ version: String) -> Bool {
+        return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedAscending
     }
 
-    public static func systemVersionLessThan(version: String) -> Bool {
-        return UIDevice.currentDevice().systemVersion.compare(version, options: .NumericSearch) == .OrderedAscending
+    public static func systemVersionLessThan(_ version: String) -> Bool {
+        return UIDevice.current.systemVersion.compare(version, options: .numeric) == .orderedAscending
     }
 
-    public static func systemVersionLessThanOrEqualTo(version: String) -> Bool {
-        return UIDevice.currentDevice().systemVersion.compare(version, options: .NumericSearch) != .OrderedDescending
+    public static func systemVersionLessThanOrEqualTo(_ version: String) -> Bool {
+        return UIDevice.current.systemVersion.compare(version, options: .numeric) != .orderedDescending
     }
 
 // MARK: - Private Methods
 
-    private func mdc_orientation() -> UIDeviceOrientation
+    fileprivate func mdc_orientation() -> UIDeviceOrientation
     {
-        let orientation = UIDevice.currentDevice().orientation
+        let orientation = UIDevice.current.orientation
         switch (orientation)
         {
-            case .Unknown:
-                return .Portrait
+            case .unknown:
+                return .portrait
 
             default:
                 return orientation
         }
     }
 
-    private func mdc_machine() -> String
+    fileprivate func mdc_machine() -> String
     {
         var systemInfo = utsname()
         uname(&systemInfo)
@@ -61,7 +61,7 @@ extension UIDevice
         let mirror = Mirror(reflecting: machine)
         
         let identifier = mirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8 where value != 0 else { return identifier }
+            guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
 
@@ -74,42 +74,42 @@ extension UIDevice
     public struct Model
     {
         public static let isIdiomPhone = {
-            return (UIDevice.currentDevice().userInterfaceIdiom == .Phone)
+            return (UIDevice.current.userInterfaceIdiom == .phone)
         }()
 
         public static let isIdiomPhoneWidescreen = {
-            return UIDevice.Model.isIdiomPhone && (UIScreen.mainScreen().bounds.size.height >= 568.0)
+            return UIDevice.Model.isIdiomPhone && (UIScreen.main.bounds.size.height >= 568.0)
         }()
 
         public static let isIdiomPad = {
-            return (UIDevice.currentDevice().userInterfaceIdiom == .Pad)
+            return (UIDevice.current.userInterfaceIdiom == .pad)
         }()
 
         public static let isRetinaDisplay = {
-            return UIScreen.mainScreen().respondsToSelector(#selector(UIScreen.displayLinkWithTarget(_:selector:))) && (UIScreen.mainScreen().scale >= 2.0)
+            return UIScreen.main.responds(to: #selector(UIScreen.displayLink(withTarget:selector:))) && (UIScreen.main.scale >= 2.0)
         }()
 
         public static let machine = {
-            return UIDevice.currentDevice().mdc_machine()
+            return UIDevice.current.mdc_machine()
         }()
     }
 
     public struct State
     {
         public static var isLandscape: Bool {
-            return UIDevice.currentDevice().mdc_orientation().isLandscape
+            return UIDevice.current.mdc_orientation().isLandscape
         }
 
         public static var isPortrait: Bool {
-            return UIDevice.currentDevice().mdc_orientation().isPortrait
+            return UIDevice.current.mdc_orientation().isPortrait
         }
 
         public static var isFlat: Bool {
-            return UIDevice.currentDevice().mdc_orientation().isFlat
+            return UIDevice.current.mdc_orientation().isFlat
         }
 
         public static var isValidInterfaceOrientation: Bool {
-            return UIDevice.currentDevice().mdc_orientation().isValidInterfaceOrientation
+            return UIDevice.current.mdc_orientation().isValidInterfaceOrientation
         }
     }
 
@@ -130,8 +130,8 @@ extension UIDevice
 
 // MARK: - Constants
 
-    private struct Inner {
-        static var SystemVersion = UIDevice.currentDevice().systemVersion.characters.split { $0 == "." }.map { String($0) }.map { Int($0) ?? 0 }
+    fileprivate struct Inner {
+        static var SystemVersion = UIDevice.current.systemVersion.characters.split { $0 == "." }.map { String($0) }.map { Int($0) ?? 0 }
     }
 
 }

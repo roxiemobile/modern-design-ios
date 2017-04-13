@@ -16,12 +16,12 @@ extension UIImage
 {
 // MARK: - Methods
     
-    public static func resizeImage(originalImage: UIImage, size: CGSize) -> UIImage?
+    public static func resizeImage(_ originalImage: UIImage, size: CGSize) -> UIImage?
     {
         // Create drawing context
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         
-        originalImage.drawInRect(CGRectMake(0.0, 0.0, size.width, size.height))
+        originalImage.draw(in: CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height))
         
         // Capture resultant image
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -31,23 +31,23 @@ extension UIImage
         return image
     }
     
-    public func resizedImageWithSize(size: CGSize) -> UIImage? {
+    public func resizedImageWithSize(_ size: CGSize) -> UIImage? {
         return UIImage.resizeImage(self, size: size)
     }
     
-    public static func resizeImage(image: UIImage, scale: Float) -> UIImage? {
+    public static func resizeImage(_ image: UIImage, scale: Float) -> UIImage? {
         return image.resizedImageWithSize(Inner.scaledSize(image.size, scale: scale))
     }
     
-    public func resizedImageWithScale(scale: Float) -> UIImage? {
+    public func resizedImageWithScale(_ scale: Float) -> UIImage? {
         return UIImage.resizeImage(self, scale: scale)
     }
 
 // MARK: - Constants
     
-    private struct Inner
+    fileprivate struct Inner
     {
-        private static func scaledSize(size: CGSize, scale: Float) -> CGSize {
+        fileprivate static func scaledSize(_ size: CGSize, scale: Float) -> CGSize {
             return CGSize(width: size.width * CGFloat(scale), height: size.height * CGFloat(scale))
         }
     }
