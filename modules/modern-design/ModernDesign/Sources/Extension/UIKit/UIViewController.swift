@@ -35,14 +35,14 @@ extension UIViewController
         return mdc_controller(nibName: nibNameOrNil, bundle: nil)
     }
 
-    public class func mdc_controller(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) -> Self
+    public class func mdc_controller(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) -> Self
     {
         // Bugfix for iOS Simulator
         let nibName = nibNameOrNil ?? defaultResourceName(self)
 
         // Initialize view controller with the .NIB file
         let controller = self.init(nibName: nibName, bundle: nibBundleOrNil) as UIViewController
-        return typeCast(controller, type: self)
+        return typeCast(object: controller, type: self)
     }
 
     public class func mdc_controller(storyboardName storyboardNameOrNil: String?) -> Self?
@@ -51,14 +51,14 @@ extension UIViewController
         return mdc_controller(storyboardName: storyboardNameOrNil, bundle: nil)
     }
 
-    public class func mdc_controller(storyboardName storyboardNameOrNil: String?, bundle storyboardBundleOrNil: NSBundle?) -> Self?
+    public class func mdc_controller(storyboardName storyboardNameOrNil: String?, bundle storyboardBundleOrNil: Bundle?) -> Self?
     {
         // Bugfix for iOS Simulator
         let storyboardName = storyboardNameOrNil ?? defaultResourceName(self)
 
         // Initialize view controller with the .Storyboard file
         let controller = UIStoryboard(name: storyboardName, bundle: storyboardBundleOrNil).instantiateInitialViewController()
-        return optionalTypeCast(controller, type: self)
+        return optionalTypeCast(object: controller, type: self)
     }
 
 // MARK: -
@@ -284,8 +284,8 @@ extension UIViewController
 
 // MARK: - Private Methods
 
-    private class func defaultResourceName(object: AnyObject) -> String {
-        return NSStringFromClass(object_getClass(object)).componentsSeparatedByString(".").last!
+    fileprivate class func defaultResourceName(_ object: AnyObject) -> String {
+        return NSStringFromClass(object_getClass(object)).components(separatedBy: ".").last!
     }
 
 // MARK: - Inner Types
@@ -296,7 +296,7 @@ extension UIViewController
 
 // MARK: - Constants
 
-    private struct Inner {
+    fileprivate struct Inner {
         static let TransitionAnimationDuration: CGFloat = 0.3
     }
 
