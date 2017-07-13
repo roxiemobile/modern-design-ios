@@ -1,37 +1,37 @@
 PODS:
   - MBProgressHUD (0.9.2)
-  - ModernDesign (0.7.2):
+  - ModernDesign (1.0.0):
     - MBProgressHUD (~> 0.9)
     - PureLayout (~> 3.0)
-    - SwiftCommons
+    - SwiftCommons (~> 1.0.0)
   - PureLayout (3.0.2)
-  - SwiftCommons (0.7.2):
+  - SwiftCommons (1.0.0):
     - SwiftyJSON (~> 3.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - ModernDesign (from `../../`)
-  - SwiftCommons (from `https://github.com/NSemakov/swift-commons.ios`, branch `feature/Swift3.0`)
+  - SwiftCommons (from `https://github.com/kolyasev/swift-commons.ios.git`, tag `1.0.0`)
 
 EXTERNAL SOURCES:
   ModernDesign:
-    :path: ../../
+    :path: "../../"
   SwiftCommons:
-    :branch: feature/Swift3.0
-    :git: https://github.com/NSemakov/swift-commons.ios
+    :git: https://github.com/kolyasev/swift-commons.ios.git
+    :tag: 1.0.0
 
 CHECKOUT OPTIONS:
   SwiftCommons:
-    :commit: 92aba9db8f280fb3bcac97b7b95eed5af180e222
-    :git: https://github.com/NSemakov/swift-commons.ios
+    :git: https://github.com/kolyasev/swift-commons.ios.git
+    :tag: 1.0.0
 
 SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  ModernDesign: 39015f0993d7653ff0c45b9ca57ca982cc940749
+  ModernDesign: 235526f4cdca9ca5afeec6037c34ed009ca110e8
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SwiftCommons: 98c0fde9cfdc6b27d77ff12574abbc3180837346
+  SwiftCommons: 9d36feb11da1604a451d69b1d20496bc8d923cea
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 042a8514179ecb42f4fceda22d32c0cac44043d4
+PODFILE CHECKSUM: 979e28bcab3fe624fb8cfadf58466a687b630712
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1
