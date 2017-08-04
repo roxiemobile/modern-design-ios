@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
   s.name                  = 'ModernDesign'
   s.summary               = 'A collection of useful UI classes common to different iOS projects.'
-  s.version               = '0.7.2'
+  s.version               = '1.0.0'
 
   s.platform              = :ios
   s.ios.deployment_target = '8.0'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig   = { 'ENABLE_BITCODE' => 'NO' }
 
   # External dependencies
-  s.dependency 'SwiftCommons', '~> 0.7.2'
+  s.dependency 'SwiftCommons', '~> 1.0.0'
   s.dependency 'MBProgressHUD', '~> 0.9'
   s.dependency 'PureLayout', '~> 3.0'
 
