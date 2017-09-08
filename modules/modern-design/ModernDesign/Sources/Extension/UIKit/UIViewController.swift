@@ -284,8 +284,18 @@ extension UIViewController
 
 // MARK: - Private Methods
 
-    fileprivate class func defaultResourceName(_ object: AnyObject) -> String {
-        return NSStringFromClass(object_getClass(object)).components(separatedBy: ".").last!
+    fileprivate class func defaultResourceName(_ object: AnyObject) -> String
+    {
+        let result: String
+        
+        if let objectClass = object_getClass(object) {
+            result = NSStringFromClass(objectClass).components(separatedBy: ".").last!
+        }
+        else {
+            result = "Error. Object's class couldn't be inspected"
+        }
+
+        return result
     }
 
 // MARK: - Inner Types
