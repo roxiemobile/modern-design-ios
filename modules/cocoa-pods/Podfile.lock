@@ -1,37 +1,50 @@
 PODS:
+  - CryptoSwift (0.7.2)
   - MBProgressHUD (0.9.2)
   - ModernDesign (1.0.0):
     - MBProgressHUD (~> 0.9)
     - PureLayout (~> 3.0)
-    - SwiftCommons (~> 1.0.0)
+    - SwiftCommons/Core/Data
   - PureLayout (3.0.2)
-  - SwiftCommons (1.0.0):
-    - SwiftyJSON (~> 3.1)
-  - SwiftyJSON (3.1.4)
+  - SwiftCommons/Core/Abstractions (0.0.1)
+  - SwiftCommons/Core/Concurrent (0.0.1)
+  - SwiftCommons/Core/Data (0.0.1):
+    - CryptoSwift (~> 0.7)
+    - SwiftCommons/Core/Diagnostics (= 0.0.1)
+  - SwiftCommons/Core/Diagnostics (0.0.1):
+    - SwiftCommons/Core/Concurrent (= 0.0.1)
+    - SwiftCommons/Core/Extensions (= 0.0.1)
+  - SwiftCommons/Core/Extensions (0.0.1):
+    - SwiftCommons/Core/Abstractions (= 0.0.1)
+    - SwiftCommons/Core/Logging (= 0.0.1)
+  - SwiftCommons/Core/Lang (0.0.1)
+  - SwiftCommons/Core/Logging (0.0.1):
+    - SwiftCommons/Core/Concurrent (= 0.0.1)
+    - SwiftCommons/Core/Lang (= 0.0.1)
 
 DEPENDENCIES:
   - ModernDesign (from `../../`)
-  - SwiftCommons (from `https://github.com/kolyasev/swift-commons.ios.git`, tag `1.0.0`)
+  - SwiftCommons/Core/Data (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `sandbox`)
 
 EXTERNAL SOURCES:
   ModernDesign:
-    :path: "../../"
+    :path: ../../
   SwiftCommons:
-    :git: https://github.com/kolyasev/swift-commons.ios.git
-    :tag: 1.0.0
+    :branch: sandbox
+    :git: https://github.com/roxiemobile/swift-commons.ios.git
 
 CHECKOUT OPTIONS:
   SwiftCommons:
-    :git: https://github.com/kolyasev/swift-commons.ios.git
-    :tag: 1.0.0
+    :commit: 90574c247a55f465d4d39493b5d7705fdbcce45d
+    :git: https://github.com/roxiemobile/swift-commons.ios.git
 
 SPEC CHECKSUMS:
+  CryptoSwift: cd2158be2bf639aabc63ec804707c7137c90157c
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  ModernDesign: 235526f4cdca9ca5afeec6037c34ed009ca110e8
+  ModernDesign: 8814039d861b987d0115c1de13d0686a446f05bb
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SwiftCommons: 9d36feb11da1604a451d69b1d20496bc8d923cea
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftCommons: ed6254732bc51524e59df2ff03b774babc5b5343
 
-PODFILE CHECKSUM: 979e28bcab3fe624fb8cfadf58466a687b630712
+PODFILE CHECKSUM: b207242931294482a095dbfa1e4fdb78d899e25d
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
