@@ -10,6 +10,7 @@
 
 import UIKit
 import SwiftCommons
+import Foundation
 
 // ----------------------------------------------------------------------------
 
@@ -42,7 +43,7 @@ extension UIViewController
 
         // Initialize view controller with the .NIB file
         let controller = self.init(nibName: nibName, bundle: nibBundleOrNil) as UIViewController
-        return typeCast(object: controller, type: self)
+        return Roxie.typeCast(controller, type: self)
     }
 
     public class func mdc_controller(storyboardName storyboardNameOrNil: String?) -> Self?
@@ -58,7 +59,7 @@ extension UIViewController
 
         // Initialize view controller with the .Storyboard file
         let controller = UIStoryboard(name: storyboardName, bundle: storyboardBundleOrNil).instantiateInitialViewController()
-        return optionalTypeCast(object: controller, type: self)
+        return Roxie.optionalTypeCast(controller, type: self)
     }
 
 // MARK: -

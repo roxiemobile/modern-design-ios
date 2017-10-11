@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig   = { 'ENABLE_BITCODE' => 'NO' }
 
   # External dependencies
-  s.dependency 'SwiftCommons', '~> 1.0.0'
+  s.dependency 'SwiftCommons/Core/Data'
   s.dependency 'MBProgressHUD', '~> 0.9'
   s.dependency 'PureLayout', '~> 3.0'
 
