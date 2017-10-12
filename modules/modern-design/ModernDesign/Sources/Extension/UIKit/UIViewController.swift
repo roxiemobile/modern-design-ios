@@ -10,6 +10,7 @@
 
 import UIKit
 import SwiftCommons
+import Foundation
 
 // ----------------------------------------------------------------------------
 
@@ -42,7 +43,7 @@ extension UIViewController
 
         // Initialize view controller with the .NIB file
         let controller = self.init(nibName: nibName, bundle: nibBundleOrNil) as UIViewController
-        return typeCast(object: controller, type: self)
+        return Roxie.forceCast(controller, to: self)
     }
 
     public class func mdc_controller(storyboardName storyboardNameOrNil: String?) -> Self?
@@ -58,7 +59,7 @@ extension UIViewController
 
         // Initialize view controller with the .Storyboard file
         let controller = UIStoryboard(name: storyboardName, bundle: storyboardBundleOrNil).instantiateInitialViewController()
-        return optionalTypeCast(object: controller, type: self)
+        return Roxie.conditionalCast(controller, to: self)
     }
 
 // MARK: -
@@ -284,8 +285,18 @@ extension UIViewController
 
 // MARK: - Private Methods
 
-    fileprivate class func defaultResourceName(_ object: AnyObject) -> String {
-        return NSStringFromClass(object_getClass(object)).components(separatedBy: ".").last!
+    fileprivate class func defaultResourceName(_ object: AnyObject) -> String
+    {
+        let result: String
+        
+        if let objectClass = object_getClass(object) {
+            result = NSStringFromClass(objectClass).components(separatedBy: ".").last!
+        }
+        else {
+            result = "Error. Object's class couldn't be inspected"
+        }
+
+        return result
     }
 
 // MARK: - Inner Types
