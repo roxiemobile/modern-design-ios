@@ -43,7 +43,7 @@ extension UIViewController
 
         // Initialize view controller with the .NIB file
         let controller = self.init(nibName: nibName, bundle: nibBundleOrNil) as UIViewController
-        return Roxie.typeCast(controller, type: self)
+        return Roxie.forceCast(controller, to: self)
     }
 
     public class func mdc_controller(storyboardName storyboardNameOrNil: String?) -> Self?
@@ -59,7 +59,7 @@ extension UIViewController
 
         // Initialize view controller with the .Storyboard file
         let controller = UIStoryboard(name: storyboardName, bundle: storyboardBundleOrNil).instantiateInitialViewController()
-        return Roxie.optionalTypeCast(controller, type: self)
+        return Roxie.conditionalCast(controller, to: self)
     }
 
 // MARK: -
