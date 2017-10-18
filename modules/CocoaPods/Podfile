@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+use_frameworks!
+
+workspace '../RoxieMobile.ModernDesign/ModernDesign.xcworkspace'
+
+
+target 'ModernDesign.UI.Extensions' do
+  project '../RoxieMobile.ModernDesign/UI.Extensions/ModernDesign.UI.Extensions.xcodeproj'
+
+  pod 'SwiftCommons/Core/Lang', :git => 'https://github.com/roxiemobile/swift-commons.ios.git', :branch => 'sandbox'
+
+  target 'ModernDesign.UI.Extensions.UnitTests' do
+    inherit! :search_paths
+  end
+end
