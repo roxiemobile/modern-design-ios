@@ -31,8 +31,6 @@
 /* Begin PBXFileReference section */
 		0C16927232B22D80D12CC0CC /* Pods-ModernDesign.UI.Extensions.UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModernDesign.UI.Extensions.UnitTests.release.xcconfig"; path = "../../CocoaPods/Pods/Target Support Files/Pods-ModernDesign.UI.Extensions.UnitTests/Pods-ModernDesign.UI.Extensions.UnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		195D394F1F72CE4900118D17 /* ModernDesignUIExtensions.UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModernDesignUIExtensions.UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19792A361F72E7200001768B /* ModernDesign.UI.Extensions-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ModernDesign.UI.Extensions-Bridging-Header.h"; sourceTree = "<group>"; };
-		19792A371F72E72A0001768B /* ModernDesign.UI.Extensions.UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ModernDesign.UI.Extensions.UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		198B43A61F9777F300AE1BD9 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		198B43A71F9777F300AE1BD9 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		198B43A81F9777F300AE1BD9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 		19EB0CA21F72DF0D0029F302 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				19792A361F72E7200001768B /* ModernDesign.UI.Extensions-Bridging-Header.h */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -152,7 +149,6 @@
 		19EB0CA41F72DF640029F302 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				19792A371F72E72A0001768B /* ModernDesign.UI.Extensions.UnitTests-Bridging-Header.h */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -404,7 +400,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.roxiemobile.$(TARGET_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(CUSTOM_PRODUCT_NAME).UnitTests";
-				SWIFT_OBJC_BRIDGING_HEADER = "Module.UnitTests/Libraries/$(TARGET_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -421,7 +416,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.roxiemobile.$(TARGET_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(CUSTOM_PRODUCT_NAME).UnitTests";
-				SWIFT_OBJC_BRIDGING_HEADER = "Module.UnitTests/Libraries/$(TARGET_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -551,7 +545,6 @@
 				);
 				PRODUCT_NAME = "$(CUSTOM_PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Module/Libraries/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -571,7 +564,6 @@
 				);
 				PRODUCT_NAME = "$(CUSTOM_PRODUCT_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Module/Libraries/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -30,7 +30,10 @@ Pod::Spec.new do |s|
 
     # TODO: Write a description
     sc.subspec 'Extensions' do |sp|
-      sp.source_files = 'modules/RoxieMobile.ModernDesign/UI.Extensions/Module/**/*.{swift,h,m,c}'
+      src_path = 'modules/RoxieMobile.ModernDesign/UI.Extensions'
+
+      # Configuration
+      sp.source_files  = "#{src_path}/Module/**/*.{swift,h,m,c,modulemap}"
 
       # Dependencies
       sp.dependency 'SwiftCommons/Core/Lang'
