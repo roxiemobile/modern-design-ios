@@ -11,12 +11,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftCommons:
-    :commit: 9ce32e097e7b9b75b1a824bff2b2dac66d3388b6
+    :commit: 3be2f3f6da0685e5318929ab2884a897be773c3b
     :git: https://github.com/roxiemobile/swift-commons.ios.git
 
 SPEC CHECKSUMS:
   SwiftCommons: c231da391b282c94c54af08f416f75e7a85c9a8b
 
-PODFILE CHECKSUM: 4a66edc051d251ff13ae26c3156c9ea31044a342
+PODFILE CHECKSUM: 02689806b3a6676b889ce508ff2f50f355f9385d
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.4.0.beta.2
