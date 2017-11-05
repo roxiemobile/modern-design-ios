@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
     # TODO: Write a description
     sc.subspec 'Extensions' do |sp|
-      src_path = 'modules/RoxieMobile.ModernDesign/UI.Extensions'
+      src_path = 'Modules/RoxieMobile.ModernDesign/UI.Extensions'
 
       # Configuration
       sp.source_files  = "#{src_path}/Module/**/*.{swift,h,m,c,modulemap}"
