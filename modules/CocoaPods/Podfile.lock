@@ -11,11 +11,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftCommons:
-    :commit: 3be2f3f6da0685e5318929ab2884a897be773c3b
+    :commit: 4235157bcfa4181ef8b10bd72c8c9d8489b75b95
     :git: https://github.com/roxiemobile/swift-commons.ios.git
 
 SPEC CHECKSUMS:
-  SwiftCommons: c231da391b282c94c54af08f416f75e7a85c9a8b
+  SwiftCommons: 549e6c448e0f2c15bc004216332773cd3072eda7
 
 PODFILE CHECKSUM: 02689806b3a6676b889ce508ff2f50f355f9385d
 
