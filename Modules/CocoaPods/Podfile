@@ -5,13 +5,24 @@ use_frameworks!
 
 workspace '../RoxieMobile.ModernDesign/ModernDesign.xcworkspace'
 
+def pod_import(name)
+  pod name, git: 'https://github.com/roxiemobile/swift-commons.ios.git', branch: 'feature/refactoring-of-project-structure'
+end
 
-target 'ModernDesign.UI.Extensions' do
-  project '../RoxieMobile.ModernDesign/UI.Extensions/ModernDesign.UI.Extensions.xcodeproj'
 
-  pod 'SwiftCommons/Core/Lang', :git => 'https://github.com/roxiemobile/swift-commons.ios.git', :branch => 'sandbox'
+target 'ModernDesign.Extensions' do
+  project '../RoxieMobile.ModernDesign/Sources/Extensions/ModernDesign.Extensions.xcodeproj'
 
-  target 'ModernDesign.UI.Extensions.UnitTests' do
-    inherit! :search_paths
-  end
+  # Dependencies
+  pod_import 'SwiftCommons/Lang'
+
+  # DELETE:
+  pod_import 'SwiftCommonsAbstractions'
+  pod_import 'SwiftCommonsConcurrent'
+  pod_import 'SwiftCommonsData'
+  pod_import 'SwiftCommonsDiagnostics'
+  pod_import 'SwiftCommonsExtensions'
+  pod_import 'SwiftCommonsLang'
+  pod_import 'SwiftCommonsLogging'
+  pod_import 'SwiftCommonsObjC'
 end

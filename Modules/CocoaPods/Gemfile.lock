@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/CocoaPods/CocoaPods.git
-  revision: 0bd131eaaa3c44accfed2c5747b049a948b6d19d
+  revision: 3fe4b32a9c3a00635383521affe9484c48cf5add
   specs:
     cocoapods (1.4.0.beta.2)
       activesupport (>= 4.0.2, < 5)
@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: https://github.com/CocoaPods/Xcodeproj.git
-  revision: aa866f4bd3f4269ae4ad1ec340ae077524f8e24d
+  revision: 8436f80811c6e1c5df79e050e3295c6fb8284d21
   specs:
     xcodeproj (1.5.3)
       CFPropertyList (~> 2.3.3)
