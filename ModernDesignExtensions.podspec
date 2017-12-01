@@ -3,8 +3,8 @@ Pod::Spec.new do |s|
 
 # MARK: - Description
 
-  s.name                  = 'ModernDesign'
-  s.summary               = 'A collection of useful UI classes common to different iOS projects.'
+  s.name                  = 'ModernDesignExtensions'
+  s.summary               = 'A collection of useful type extensions used for iOS apps development.'
   s.version               = '0.0.1'
 
   s.platform              = :ios
@@ -24,12 +24,15 @@ Pod::Spec.new do |s|
     tag: s.version.to_s
   }
 
-  s.default_subspecs = 'Extensions'
+  base_dir = 'Modules/RoxieMobile.ModernDesign/Sources/Extensions/'
+  s.source_files = base_dir + '{Sources,Dependencies}/**/*.swift'
 
-# MARK: - Modules
+  s.pod_target_xcconfig = {
+    'GCC_PREPROCESSOR_DEFINITIONS' => "$(inherited) MODERNDESIGN_FRAMEWORK_VERSION=@\\\"#{s.version}\\\"",
+    'SWIFT_VERSION' => '4.0'
+  }
 
-  # A collection of useful type extensions used for iOS apps development.
-  s.subspec 'Extensions' do |sp|
-    sp.dependency 'ModernDesignExtensions', s.version.to_s
-  end
+# MARK: - Dependencies
+
+  s.dependency 'SwiftCommons/Lang', '~> 1.1.0'
 end
