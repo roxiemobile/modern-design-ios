@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
 # MARK: - Modules
 
-  # TODO: Write a description
+  # A collection of useful type extensions used for iOS apps development.
   s.subspec 'Extensions' do |sp|
     sp.dependency 'ModernDesignExtensions', s.version.to_s
   end

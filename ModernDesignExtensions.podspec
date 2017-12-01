@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 # MARK: - Description
 
   s.name                  = 'ModernDesignExtensions'
-  s.summary               = 'TODO:'
+  s.summary               = 'A collection of useful type extensions used for iOS apps development.'
   s.version               = '0.0.1'
 
   s.platform              = :ios
@@ -34,5 +34,5 @@ Pod::Spec.new do |s|
 
 # MARK: - Dependencies
 
-  s.dependency 'SwiftCommons/Lang', '~> 0.0.1' # FIXME:
+  s.dependency 'SwiftCommons/Lang', '~> 1.1.0'
 end
