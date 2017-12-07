@@ -24,8 +24,6 @@ Pod::Spec.new do |s|
     tag: s.version.to_s
   }
 
-  s.default_subspecs = 'Extensions'
-
 # MARK: - Modules
 
   # A collection of useful type extensions used for iOS apps development.
