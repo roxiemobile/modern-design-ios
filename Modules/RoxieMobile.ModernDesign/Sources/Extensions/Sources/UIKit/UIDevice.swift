@@ -131,9 +131,8 @@ extension UIDevice
 // MARK: - Constants
 
     fileprivate struct Inner {
-        static var SystemVersion = UIDevice.current.systemVersion.characters.split { $0 == "." }.map { String($0) }.map { Int($0) ?? 0 }
+        static var SystemVersion = UIDevice.current.systemVersion.split { $0 == "." }.map { String($0) }.map { Int($0) ?? 0 }
     }
-
 }
 
 // ----------------------------------------------------------------------------

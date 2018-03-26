@@ -1,109 +1,17 @@
 PODS:
-  - CryptoSwift/Static (0.8.0)
-  - Dispatch/Static (2.0.4)
-  - SwiftCommons/Lang (0.0.1):
-    - SwiftCommonsLang (= 0.0.1)
-  - SwiftCommonsAbstractions (0.0.1)
-  - SwiftCommonsConcurrent (0.0.1):
-    - Dispatch/Static (~> 2.0.4)
-    - SwiftCommonsObjC (= 0.0.1)
-  - SwiftCommonsData (0.0.1):
-    - CryptoSwift/Static (~> 0.8.0)
-    - SwiftCommonsDiagnostics (= 0.0.1)
-  - SwiftCommonsDiagnostics (0.0.1):
-    - SwiftCommonsConcurrent (= 0.0.1)
-    - SwiftCommonsExtensions (= 0.0.1)
-  - SwiftCommonsExtensions (0.0.1):
-    - SwiftCommonsAbstractions (= 0.0.1)
-    - SwiftCommonsLogging (= 0.0.1)
-  - SwiftCommonsLang (0.0.1)
-  - SwiftCommonsLogging (0.0.1):
-    - SwiftCommonsConcurrent (= 0.0.1)
-    - SwiftCommonsLang (= 0.0.1)
-  - SwiftCommonsObjC (0.0.1)
+  - SwiftCommons-SCF/Lang (1.2.5):
+    - SwiftCommonsLang-SCF (= 1.2.5)
+  - SwiftCommonsLang-SCF (1.2.5):
+    - SwiftCommonsLang-SCF/StaticCocoaFramework (= 1.2.5)
+  - SwiftCommonsLang-SCF/StaticCocoaFramework (1.2.5)
 
 DEPENDENCIES:
-  - SwiftCommons/Lang (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsAbstractions (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsConcurrent (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsData (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsDiagnostics (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsExtensions (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsLang (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsLogging (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-  - SwiftCommonsObjC (from `https://github.com/roxiemobile/swift-commons.ios.git`, branch `feature/refactoring-of-project-structure`)
-
-EXTERNAL SOURCES:
-  SwiftCommons:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsAbstractions:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsConcurrent:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsData:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsDiagnostics:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsExtensions:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsLang:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsLogging:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsObjC:
-    :branch: feature/refactoring-of-project-structure
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-
-CHECKOUT OPTIONS:
-  SwiftCommons:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsAbstractions:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsConcurrent:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsData:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsDiagnostics:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsExtensions:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsLang:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsLogging:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
-  SwiftCommonsObjC:
-    :commit: 737753a62b8fd1033dc656515cfbd57a5181b266
-    :git: https://github.com/roxiemobile/swift-commons.ios.git
+  - SwiftCommons-SCF/Lang (~> 1.2.5)
 
 SPEC CHECKSUMS:
-  CryptoSwift: b013d05129134ab1f9637525703f45082c724953
-  Dispatch: 3456ea74f98635cecb671828660ef4abad607e5c
-  SwiftCommons: 1d65aae1b0268dd87880a7ab5aa197755050593c
-  SwiftCommonsAbstractions: d505f1da252edd31f211e4c63a1aa2b00af3b195
-  SwiftCommonsConcurrent: cd6d81df5dea84776bdff04dc754b094f435a249
-  SwiftCommonsData: d854bf1146dd3290ef0162e1b9b4f4ad9788c450
-  SwiftCommonsDiagnostics: 339e7c0c4042af4592f9e9f872c3387e82dcd9e0
-  SwiftCommonsExtensions: 138253dd38a8511be391960a33f3c1dae32052d8
-  SwiftCommonsLang: d3e40517035c766bf1d248a0e5a37bb66c082f1d
-  SwiftCommonsLogging: 315ae0b955f8f0e63f489f41946b29ad2806a174
-  SwiftCommonsObjC: c90a44fb94bef52a7d12bf53c4ca5e90aadb52fc
+  SwiftCommons-SCF: c42814a1c83f2dd0300dd52698ad755a2b64bf15
+  SwiftCommonsLang-SCF: 35f8b8803301cf74f35a683cf4f1c70f3f8d6b3d
 
-PODFILE CHECKSUM: f6d0b734604259a29940f0f06b8f51bc52d18789
+PODFILE CHECKSUM: 99201f46b2c13634baf87981c2c0ad93b7033c21
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.4.0

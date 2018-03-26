@@ -1,12 +1,13 @@
-source 'https://github.com/roxiemobile/shared-cocoa-frameworks.ios.git'
+source 'https://github.com/roxiemobile/static-cocoa-frameworks.ios.git'
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 workspace '../RoxieMobile.ModernDesign/ModernDesign.xcworkspace'
 
-def pod_import(name)
-  pod name, git: 'https://github.com/roxiemobile/swift-commons.ios.git', branch: 'feature/refactoring-of-project-structure'
+def pod_from(name, *args)
+  name = name.split('/').tap { |arr| arr[0] = "#{arr[0]}-SCF" }.reject(&:empty?).join('/')
+  pod(name, *args)
 end
 
 
@@ -14,15 +15,5 @@ target 'ModernDesign.Extensions' do
   project '../RoxieMobile.ModernDesign/Sources/Extensions/ModernDesign.Extensions.xcodeproj'
 
   # Dependencies
-  pod_import 'SwiftCommons/Lang'
-
-  # DELETE:
-  pod_import 'SwiftCommonsAbstractions'
-  pod_import 'SwiftCommonsConcurrent'
-  pod_import 'SwiftCommonsData'
-  pod_import 'SwiftCommonsDiagnostics'
-  pod_import 'SwiftCommonsExtensions'
-  pod_import 'SwiftCommonsLang'
-  pod_import 'SwiftCommonsLogging'
-  pod_import 'SwiftCommonsObjC'
+  pod_from 'SwiftCommons/Lang', '~> 1.2.5'
 end

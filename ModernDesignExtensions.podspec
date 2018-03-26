@@ -8,9 +8,10 @@ Pod::Spec.new do |s|
   s.version               = '1.1.0'
 
   s.platform              = :ios
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
+  s.swift_version         = '4.0'
 
-  s.cocoapods_version     = '>= 1.4.0.beta.2'
+  s.cocoapods_version     = '>= 1.4.0'
   s.static_framework      = true
 
   s.homepage              = 'https://github.com/roxiemobile/modern-design.ios'
@@ -28,11 +29,10 @@ Pod::Spec.new do |s|
   s.source_files = base_dir + '{Sources,Dependencies}/**/*.swift'
 
   s.pod_target_xcconfig = {
-    'GCC_PREPROCESSOR_DEFINITIONS' => "$(inherited) MODERNDESIGN_FRAMEWORK_VERSION=@\\\"#{s.version}\\\"",
-    'SWIFT_VERSION' => '4.0'
+    'GCC_PREPROCESSOR_DEFINITIONS' => "$(inherited) MODERNDESIGN_FRAMEWORK_VERSION=@\\\"#{s.version}\\\""
   }
 
 # MARK: - Dependencies
 
-  s.dependency 'SwiftCommons/Lang', '~> 1.1.0'
+  s.dependency 'SwiftCommons/Lang', '~> 1.2.5'
 end
