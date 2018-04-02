@@ -34,5 +34,5 @@ Pod::Spec.new do |s|
 
 # MARK: - Dependencies
 
-  s.dependency 'SwiftCommons/Lang', '~> 1.2.5'
+  s.dependency 'SwiftCommons/Lang', '~> 1.2.6'
 end

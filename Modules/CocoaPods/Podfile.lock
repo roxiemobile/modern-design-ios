@@ -1,17 +1,17 @@
 PODS:
-  - SwiftCommons-SCF/Lang (1.2.5):
-    - SwiftCommonsLang-SCF (= 1.2.5)
-  - SwiftCommonsLang-SCF (1.2.5):
-    - SwiftCommonsLang-SCF/StaticCocoaFramework (= 1.2.5)
-  - SwiftCommonsLang-SCF/StaticCocoaFramework (1.2.5)
+  - SwiftCommons-SCF/Lang (1.2.6):
+    - SwiftCommonsLang-SCF (= 1.2.6)
+  - SwiftCommonsLang-SCF (1.2.6):
+    - SwiftCommonsLang-SCF/StaticCocoaFramework (= 1.2.6)
+  - SwiftCommonsLang-SCF/StaticCocoaFramework (1.2.6)
 
 DEPENDENCIES:
-  - SwiftCommons-SCF/Lang (~> 1.2.5)
+  - SwiftCommons-SCF/Lang (~> 1.2.6)
 
 SPEC CHECKSUMS:
-  SwiftCommons-SCF: c42814a1c83f2dd0300dd52698ad755a2b64bf15
-  SwiftCommonsLang-SCF: 35f8b8803301cf74f35a683cf4f1c70f3f8d6b3d
+  SwiftCommons-SCF: 8795226f9661b5f88b91355fb4a9496dae5ad1bb
+  SwiftCommonsLang-SCF: d63ca3ece3255070fe59dd0b8ab3a44ab30111a7
 
-PODFILE CHECKSUM: 99201f46b2c13634baf87981c2c0ad93b7033c21
+PODFILE CHECKSUM: 8ca0a2638da467563c10f4bdf125d6c07bc28754
 
 COCOAPODS: 1.4.0

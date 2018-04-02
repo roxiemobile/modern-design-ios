@@ -15,5 +15,5 @@ target 'ModernDesign.Extensions' do
   project '../RoxieMobile.ModernDesign/Sources/Extensions/ModernDesign.Extensions.xcodeproj'
 
   # Dependencies
-  pod_from 'SwiftCommons/Lang', '~> 1.2.5'
+  pod_from 'SwiftCommons/Lang', '~> 1.2.6'
 end
