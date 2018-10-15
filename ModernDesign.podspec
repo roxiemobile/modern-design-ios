@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
   s.name                  = 'ModernDesign'
   s.summary               = 'A collection of useful UI classes common to different iOS projects.'
-  s.version               = '1.2.1'
+  s.version               = '1.3.0'
 
   s.platform              = :ios
   s.ios.deployment_target = '9.0'
