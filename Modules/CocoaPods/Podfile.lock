@@ -1,17 +1,22 @@
 PODS:
-  - SwiftCommons-SCF/Lang (1.2.6):
-    - SwiftCommonsLang-SCF (= 1.2.6)
-  - SwiftCommonsLang-SCF (1.2.6):
-    - SwiftCommonsLang-SCF/StaticCocoaFramework (= 1.2.6)
-  - SwiftCommonsLang-SCF/StaticCocoaFramework (1.2.6)
+  - SwiftCommons-SCF42/Lang (1.3.0):
+    - SwiftCommonsLang-SCF42 (= 1.3.0)
+  - SwiftCommonsLang-SCF42 (1.3.0):
+    - SwiftCommonsLang-SCF42/StaticCocoaFramework (= 1.3.0)
+  - SwiftCommonsLang-SCF42/StaticCocoaFramework (1.3.0)
 
 DEPENDENCIES:
-  - SwiftCommons-SCF/Lang (~> 1.2.6)
+  - SwiftCommons-SCF42/Lang (~> 1.3.0)
+
+SPEC REPOS:
+  https://github.com/roxiemobile/static-cocoa-frameworks.ios.git:
+    - SwiftCommons-SCF42
+    - SwiftCommonsLang-SCF42
 
 SPEC CHECKSUMS:
-  SwiftCommons-SCF: 8795226f9661b5f88b91355fb4a9496dae5ad1bb
-  SwiftCommonsLang-SCF: d63ca3ece3255070fe59dd0b8ab3a44ab30111a7
+  SwiftCommons-SCF42: 5d9c4928f17c769eb166d08c7d5226895ccbe258
+  SwiftCommonsLang-SCF42: 816ccacb2b9ea493a9b0c4131d0338123dcda45f
 
-PODFILE CHECKSUM: 8ca0a2638da467563c10f4bdf125d6c07bc28754
+PODFILE CHECKSUM: a0dfa3387ffa0fd52e31a91f5d4e21b62828cc18
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
