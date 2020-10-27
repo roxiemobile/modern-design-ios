@@ -5,13 +5,13 @@ Pod::Spec.new do |s|
 
   s.name                  = 'ModernDesign'
   s.summary               = 'A collection of useful UI classes common to different iOS projects.'
-  s.version               = '1.4.0'
+  s.version               = '1.5.0'
 
   s.platform              = :ios
   s.ios.deployment_target = '9.0'
-  s.swift_version         = '4.2'
+  s.swift_version         = '5.3'
 
-  s.cocoapods_version     = '>= 1.7.5'
+  s.cocoapods_version     = '>= 1.10.0'
   s.static_framework      = true
 
   s.homepage              = 'https://github.com/roxiemobile/modern-design.ios'
