@@ -6,7 +6,7 @@ use_frameworks!
 workspace '../RoxieMobile.ModernDesign/ModernDesign.xcworkspace'
 
 def pod_from(name, *args)
-  name = name.split('/').tap { |arr| arr[0] = "#{arr[0]}-SCF42" }.reject(&:empty?).join('/')
+  name = name.split('/').tap { |arr| arr[0] = "#{arr[0]}-SCF53" }.reject(&:empty?).join('/')
   pod(name, *args)
 end
 
@@ -15,5 +15,5 @@ target 'ModernDesign.Extensions' do
   project '../RoxieMobile.ModernDesign/Sources/Extensions/ModernDesign.Extensions.xcodeproj'
 
   # Dependencies
-  pod_from 'SwiftCommons/Lang', '~> 1.4.0'
+  pod_from 'SwiftCommons/Lang', '~> 1.5.0'
 end
