@@ -1,27 +1,20 @@
 PODS:
-  - SwiftCommons-SCF53/Lang (1.5.0):
-    - SwiftCommonsLang-SCF53 (= 1.5.0)
-  - SwiftCommonsLang-SCF53 (1.5.0):
-    - SwiftCommonsLang-SCF53/StaticCocoaFramework (= 1.5.0)
-  - SwiftCommonsLang-SCF53/StaticCocoaFramework (1.5.0)
-  - SwiftLint (0.40.3)
+  - SwiftCommons/Lang (1.6.0):
+    - SwiftCommonsLang (= 1.6.0)
+  - SwiftCommonsLang (1.6.0)
 
 DEPENDENCIES:
-  - SwiftCommons-SCF53/Lang (~> 1.5.0)
-  - SwiftLint (~> 0.40.3)
+  - SwiftCommons/Lang (~> 1.6.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - SwiftLint
-  https://github.com/roxiemobile/static-cocoa-frameworks.ios.git:
-    - SwiftCommons-SCF53
-    - SwiftCommonsLang-SCF53
+    - SwiftCommons
+    - SwiftCommonsLang
 
 SPEC CHECKSUMS:
-  SwiftCommons-SCF53: eab0998892d05432be930696797e9c12f354770d
-  SwiftCommonsLang-SCF53: 7fd8094d317c5377c19da2f1e4e678c67b2b06d0
-  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  SwiftCommons: b810184bc649e53a3699f8fd32b843f1664e4a00
+  SwiftCommonsLang: 576e1474633fb48cde34db9eb5863b52e0f4b693
 
-PODFILE CHECKSUM: 2a3c2c8737ed707422bd6de4a4d53c922818e95b
+PODFILE CHECKSUM: 6d25ae981c06dedecfbe82a363048b633c8ea44d
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
