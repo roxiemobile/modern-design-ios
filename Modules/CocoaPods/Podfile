@@ -1,19 +1,16 @@
-source 'https://github.com/roxiemobile/static-cocoa-frameworks.ios.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
-use_frameworks!
+platform :ios, '12.0'
+use_frameworks! :linkage => :static
 
 workspace '../RoxieMobile.ModernDesign/ModernDesign.xcworkspace'
 
-def pod_from(name, *args)
-  name = name.split('/').tap { |arr| arr[0] = "#{arr[0]}-SCF53" }.reject(&:empty?).join('/')
-  pod(name, *args)
-end
 
+# MARK: - Sources
 
 target 'ModernDesign.Extensions' do
   project '../RoxieMobile.ModernDesign/Sources/Extensions/ModernDesign.Extensions.xcodeproj'
 
   # Dependencies
-  pod_from 'SwiftCommons/Lang', '~> 1.5.0'
+  pod 'SwiftCommons/Lang', '~> 1.6.0'
 end
