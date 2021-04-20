@@ -3,8 +3,8 @@
 //  UIDevice.swift
 //
 //  @author     Denis Kolyasev <KolyasevDA@ekassir.com>
-//  @copyright  Copyright (c) 2015, eKassir Ltd. All rights reserved.
-//  @link       http://www.ekassir.com/
+//  @copyright  Copyright (c) 2017, Roxie Mobile Ltd. All rights reserved.
+//  @link       https://www.roxiemobile.com/
 //
 // ----------------------------------------------------------------------------
 
@@ -12,8 +12,8 @@ import UIKit
 
 // ----------------------------------------------------------------------------
 
-extension UIDevice
-{
+extension UIDevice {
+
 // MARK: - Methods
 
     public static func systemVersionEqualTo(_ version: String) -> Bool {
@@ -38,30 +38,29 @@ extension UIDevice
 
 // MARK: - Private Methods
 
-    fileprivate func mdc_orientation() -> UIDeviceOrientation
-    {
+    private func mdc_orientation() -> UIDeviceOrientation {
         let orientation = UIDevice.current.orientation
-        switch (orientation)
-        {
+
+        switch (orientation) {
             case .unknown:
                 return .portrait
-
             default:
                 return orientation
         }
     }
 
-    fileprivate func mdc_machine() -> String
-    {
+    private func mdc_machine() -> String {
+
         var systemInfo = utsname()
         uname(&systemInfo)
 
         let machine = systemInfo.machine
-        //let mirror = reflect(machine)
         let mirror = Mirror(reflecting: machine)
-        
+
         let identifier = mirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8, value != 0 else { return identifier }
+            guard let value = element.value as? Int8, value != 0 else {
+                return identifier
+            }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
 
@@ -71,8 +70,8 @@ extension UIDevice
 
 // MARK: - Inner Types
 
-    public struct Model
-    {
+    public struct Model {
+
         public static let isIdiomPhone = {
             return (UIDevice.current.userInterfaceIdiom == .phone)
         }()
@@ -86,7 +85,8 @@ extension UIDevice
         }()
 
         public static let isRetinaDisplay = {
-            return UIScreen.main.responds(to: #selector(UIScreen.displayLink(withTarget:selector:))) && (UIScreen.main.scale >= 2.0)
+            return UIScreen.main.responds(to: #selector(UIScreen.displayLink(withTarget:selector:)))
+                && UIScreen.main.scale >= 2.0
         }()
 
         public static let machine = {
@@ -94,8 +94,8 @@ extension UIDevice
         }()
     }
 
-    public struct State
-    {
+    public struct State {
+
         public static var isLandscape: Bool {
             return UIDevice.current.mdc_orientation().isLandscape
         }
@@ -113,8 +113,8 @@ extension UIDevice
         }
     }
 
-    public struct SystemVersion
-    {
+    public struct SystemVersion {
+
         public static let Major = {
             return (Inner.SystemVersion.count >= 1) ? Inner.SystemVersion[0] : 0
         }()
@@ -130,9 +130,10 @@ extension UIDevice
 
 // MARK: - Constants
 
-    fileprivate struct Inner {
-        static var SystemVersion = UIDevice.current.systemVersion.split { $0 == "." }.map { String($0) }.map { Int($0) ?? 0 }
+    private struct Inner {
+        static var SystemVersion = UIDevice.current.systemVersion
+            .split { $0 == "." }
+            .map { String($0) }
+            .map { Int($0) ?? 0 }
     }
 }
-
-// ----------------------------------------------------------------------------

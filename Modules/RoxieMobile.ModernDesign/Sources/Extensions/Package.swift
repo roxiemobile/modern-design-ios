@@ -6,21 +6,17 @@ import PackageDescription
 // @link https://docs.swift.org/package-manager/PackageDescription/PackageDescription.html
 
 let package = Package(
-    name: "ModernDesign",
+    name: "ModernDesign.Extensions",
     platforms: [
         .iOS(.v12),
     ],
     products: [
         .library(
-            name: "ModernDesign",
-            type: .static,
-            targets: ["ModernDesign"]
-        ),
-
-        .library(
             name: "ModernDesignExtensions",
             type: .static,
-            targets: ["ModernDesignExtensions"]
+            targets: [
+                "ModernDesignExtensions",
+            ]
         ),
     ],
     dependencies: [
@@ -32,18 +28,11 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ModernDesign",
-            dependencies: [
-                .target(name: "ModernDesignExtensions"),
-            ]
-        ),
-
-        .target(
             name: "ModernDesignExtensions",
             dependencies: [
                 .product(name: "SwiftCommonsLang", package: "SwiftCommons"),
             ],
-            path: "Modules/RoxieMobile.ModernDesign/Sources/Extensions/Sources"
+            path: "Sources"
         ),
     ],
     swiftLanguageVersions: [.v5]

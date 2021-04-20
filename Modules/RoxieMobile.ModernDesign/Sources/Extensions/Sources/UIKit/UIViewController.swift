@@ -3,8 +3,8 @@
 //  UIViewController.swift
 //
 //  @author     Alexander Bragin <alexander.bragin@gmail.com>
-//  @copyright  Copyright (c) 2015, MediariuM Ltd. All rights reserved.
-//  @link       http://www.roxiemobile.com/
+//  @copyright  Copyright (c) 2017, Roxie Mobile Ltd. All rights reserved.
+//  @link       https://www.roxiemobile.com/
 //
 // ----------------------------------------------------------------------------
 
@@ -13,8 +13,8 @@ import SwiftCommonsLang
 
 // ----------------------------------------------------------------------------
 
-extension UIViewController
-{
+extension UIViewController {
+
 // MARK: - Construction
 
     public convenience init(nibName nibNameOrNil: String?) {
@@ -23,20 +23,17 @@ extension UIViewController
 
 // MARK: - Methods
 
-    public class func mdc_controller() -> Self
-    {
+    public class func mdc_controller() -> Self {
         // Load a .NIB whose name is the same as view controller's class
         return mdc_controller(nibName: defaultResourceName(self), bundle: nil)
     }
 
-    public class func mdc_controller(nibName nibNameOrNil: String?) -> Self
-    {
+    public class func mdc_controller(nibName nibNameOrNil: String?) -> Self {
         // Initialize view controller with the .NIB file
         return mdc_controller(nibName: nibNameOrNil, bundle: nil)
     }
 
-    public class func mdc_controller(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) -> Self
-    {
+    public class func mdc_controller(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) -> Self {
         // Bugfix for iOS Simulator
         let nibName = nibNameOrNil ?? defaultResourceName(self)
 
@@ -45,191 +42,25 @@ extension UIViewController
         return Roxie.forceCast(controller, to: self)
     }
 
-    public class func mdc_controller(storyboardName storyboardNameOrNil: String?) -> Self?
-    {
+    public class func mdc_controller(storyboardName storyboardNameOrNil: String?) -> Self? {
         // Initialize view controller with the .Storyboard file
         return mdc_controller(storyboardName: storyboardNameOrNil, bundle: nil)
     }
 
-    public class func mdc_controller(storyboardName storyboardNameOrNil: String?, bundle storyboardBundleOrNil: Bundle?) -> Self?
-    {
+    public class func mdc_controller(
+        storyboardName storyboardNameOrNil: String?,
+        bundle storyboardBundleOrNil: Bundle?
+    ) -> Self? {
+
         // Bugfix for iOS Simulator
         let storyboardName = storyboardNameOrNil ?? defaultResourceName(self)
 
         // Initialize view controller with the .Storyboard file
-        let controller = UIStoryboard(name: storyboardName, bundle: storyboardBundleOrNil).instantiateInitialViewController()
+        let controller = UIStoryboard(name: storyboardName, bundle: storyboardBundleOrNil)
+            .instantiateInitialViewController()
+
         return Roxie.conditionalCast(controller, to: self)
     }
-
-// MARK: -
-
-// FIXME: uncomment!
-//
-//    // Adds the given view controller as a children controller to the parent controller
-//    + (void)addChildViewController:(UIViewController *)childController toParentViewController:(UIViewController *)parentController
-//            withAnimationOptions:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completionBlock;
-//    + (void)addChildViewController:(UIViewController *)childController toParentViewController:(UIViewController *)parentController
-//            withAnimationOptions:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completionBlock
-//    {
-//        if (parentController == nil || childController == nil)
-//            return;
-//
-//        // Fix for "viewDidLoad" after transition
-//        UIView *childView = childController.view;
-//
-//        // Add child controller
-//        [parentController addChildViewController:childController];
-//
-//        // Set child controller view frame equal to parent controller container frame
-//        childView.frame = parentController.view.bounds;
-//
-//        // Add child view
-//        if (options == UIViewAnimationOptionTransitionNone)
-//        {
-//            // Add without animation
-//            [parentController.view addSubview:childView];
-//
-//            if (completionBlock) {
-//                completionBlock(YES);
-//            }
-//        }
-//        else
-//        {
-//            // Transition with animation
-//            [UIView transitionWithView:parentController.view
-//                    duration:kTransitionAnimationDuration
-//                    options:options
-//                    animations:^() {
-//                        [parentController.view addSubview:childView];
-//                    }
-//                    completion:completionBlock];
-//        }
-//    }
-
-// FIXME: uncomment!
-//        public class func addChildViewController(childController: UIViewController, toParentViewController: UIViewController, withAnimationOptions options: UIViewAnimationOptions, completion: FinishedCompletionHandler? = nil)
-//        {
-//    //        if (parentController == nil || childController == nil)
-//    //            return;
-//    //
-//    //        // Fix for "viewDidLoad" after transition
-//    //        UIView *childView = childController.view;
-//    //
-//    //        // Add child controller
-//    //        [parentController addChildViewController:childController];
-//    //
-//    //        // Set child controller view frame equal to parent controller container frame
-//    //        childView.frame = parentController.view.bounds;
-//    //
-//    //        // Add child view
-//    //        if (options == UIViewAnimationOptionTransitionNone)
-//    //        {
-//    //            // Add without animation
-//    //            [parentController.view addSubview:childView];
-//    //
-//    //            if (completionBlock) {
-//    //                completionBlock(YES);
-//    //            }
-//    //        }
-//    //        else
-//    //        {
-//    //            // Transition with animation
-//    //            [UIView transitionWithView:parentController.view
-//    //                    duration:kTransitionAnimationDuration
-//    //                    options:options
-//    //                    animations:^() {
-//    //                        [parentController.view addSubview:childView];
-//    //                    }
-//    //                    completion:completionBlock];
-//    //        }
-//        }
-//
-//        public class func addChildViewController(childController: UIViewController, toParentViewController parentController: UIViewController, completion: FinishedCompletionHandler? = nil) {
-//            addChildViewController(childController, toParentViewController: parentController, withAnimationOptions: .TransitionCrossDissolve, completion: completion)
-//        }
-
-// MARK: -
-
-// FIXME: uncomment!
-//
-//    // Removes the the receiver from its parent's children controllers array
-//    + (void)removeFromParentViewController:(UIViewController *)childController withAnimationOptions:(UIViewAnimationOptions)options
-//            completion:(void (^)(BOOL finished))completionBlock;
-//    + (void)removeFromParentViewController:(UIViewController *)childController
-//            withAnimationOptions:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completionBlock
-//    {
-//        UIViewController *containerController = childController.parentViewController;
-//        if (containerController)
-//        {
-//            if (options == UIViewAnimationOptionTransitionNone)
-//            {
-//                // Remove without animation
-//                [childController.view removeFromSuperview];
-//                [childController removeFromParentViewController];
-//
-//                if (completionBlock) {
-//                    completionBlock(YES);
-//                }
-//            }
-//            else
-//            {
-//                // Transition with animation
-//                [UIView transitionWithView:containerController.view
-//                        duration:kTransitionAnimationDuration
-//                        options:options
-//                        animations:^() {
-//                            [childController.view removeFromSuperview];
-//                        }
-//                        completion:^(BOOL finished) {
-//                            [childController removeFromParentViewController];
-//
-//                            if (completionBlock) {
-//                                completionBlock(finished);
-//                            }
-//                        }];
-//            }
-//        }
-//    }
-
-// FIXME: uncomment!
-//        public class func removeFromParentViewController(childController: UIViewController, withAnimationOptions options: UIViewAnimationOptions, completion: FinishedCompletionHandler? = nil)
-//        {
-//    //        UIViewController *containerController = childController.parentViewController;
-//    //        if (containerController)
-//    //        {
-//    //            if (options == UIViewAnimationOptionTransitionNone)
-//    //            {
-//    //                // Remove without animation
-//    //                [childController.view removeFromSuperview];
-//    //                [childController removeFromParentViewController];
-//    //
-//    //                if (completionBlock) {
-//    //                    completionBlock(YES);
-//    //                }
-//    //            }
-//    //            else
-//    //            {
-//    //                // Transition with animation
-//    //                [UIView transitionWithView:containerController.view
-//    //                        duration:kTransitionAnimationDuration
-//    //                        options:options
-//    //                        animations:^() {
-//    //                            [childController.view removeFromSuperview];
-//    //                        }
-//    //                        completion:^(BOOL finished) {
-//    //                            [childController removeFromParentViewController];
-//    //
-//    //                            if (completionBlock) {
-//    //                                completionBlock(finished);
-//    //                            }
-//    //                        }];
-//    //            }
-//    //        }
-//        }
-//
-//        public class func removeFromParentViewController(childController: UIViewController, completion: FinishedCompletionHandler? = nil) {
-//            removeFromParentViewController(childController, withAnimationOptions: .TransitionCrossDissolve, completion: completion)
-//        }
 
 // MARK: -
 
@@ -284,21 +115,13 @@ extension UIViewController
 
 // MARK: - Private Methods
 
-    fileprivate class func defaultResourceName(_ object: AnyObject) -> String {
+    private class func defaultResourceName(_ object: AnyObject) -> String {
         return Roxie.typeName(of: object)
     }
 
-// MARK: - Inner Types
-
-// FIXME: uncomment!
-//    // FIXME: Rename this typealias
-//    public typealias FinishedCompletionHandler = (@objc_block (finished: Bool) -> Void)
-
 // MARK: - Constants
 
-    fileprivate struct Inner {
+    private struct Inner {
         static let TransitionAnimationDuration: CGFloat = 0.3
     }
 }
-
-// ----------------------------------------------------------------------------
