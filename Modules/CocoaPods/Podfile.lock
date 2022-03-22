@@ -1,10 +1,10 @@
 PODS:
-  - SwiftCommons/Lang (1.6.0):
-    - SwiftCommonsLang (= 1.6.0)
-  - SwiftCommonsLang (1.6.0)
+  - SwiftCommons/Lang (1.6.3):
+    - SwiftCommonsLang (= 1.6.3)
+  - SwiftCommonsLang (1.6.3)
 
 DEPENDENCIES:
-  - SwiftCommons/Lang (~> 1.6.0)
+  - SwiftCommons/Lang (~> 1.6.3)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - SwiftCommonsLang
 
 SPEC CHECKSUMS:
-  SwiftCommons: b810184bc649e53a3699f8fd32b843f1664e4a00
-  SwiftCommonsLang: 576e1474633fb48cde34db9eb5863b52e0f4b693
+  SwiftCommons: 763077f49cfb9899080af41bee4e53243c2187c2
+  SwiftCommonsLang: 69c80b50239afc587da136347f641751ae71ce45
 
-PODFILE CHECKSUM: 6d25ae981c06dedecfbe82a363048b633c8ea44d
+PODFILE CHECKSUM: e2f9ca08e4ad38ca3db1a4e8aa154f3edceed9ea
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
