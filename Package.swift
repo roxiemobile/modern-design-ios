@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -27,7 +27,7 @@ let package = Package(
         .package(
             name: "SwiftCommons",
             url: "https://github.com/roxiemobile/swift-commons.ios",
-            .upToNextMinor(from: "1.6.0")
+            .upToNextMinor(from: "1.6.3")
         ),
     ],
     targets: [
