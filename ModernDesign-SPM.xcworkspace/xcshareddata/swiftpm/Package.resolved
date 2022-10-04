@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "CryptoSwift",
-        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift",
-        "state": {
-          "branch": null,
-          "revision": "12f2389aca4a07e0dd54c86ec23d0721ed88b8db",
-          "version": "1.4.3"
-        }
-      },
-      {
-        "package": "SwiftCommons",
-        "repositoryURL": "https://github.com/roxiemobile/swift-commons.ios",
-        "state": {
-          "branch": null,
-          "revision": "298d9b961e63e59cdaec4f539290e5d21a5da70c",
-          "version": "1.6.3"
-        }
+  "pins" : [
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift",
+      "state" : {
+        "revision" : "12f2389aca4a07e0dd54c86ec23d0721ed88b8db",
+        "version" : "1.4.3"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swift-commons-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roxiemobile/swift-commons-ios",
+      "state" : {
+        "revision" : "298d9b961e63e59cdaec4f539290e5d21a5da70c",
+        "version" : "1.6.3"
+      }
+    }
+  ],
+  "version" : 2
 }
