@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version: 5.6
 
 import PackageDescription
 
@@ -8,7 +8,7 @@ import PackageDescription
 let package = Package(
     name: "ModernDesign",
     platforms: [
-        .iOS(.v12),
+        .iOS(.v13),
     ],
     products: [
         .library(
@@ -25,9 +25,8 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            name: "SwiftCommons",
-            url: "https://github.com/roxiemobile/swift-commons.ios",
-            .upToNextMinor(from: "1.6.3")
+            url: "https://github.com/roxiemobile/swift-commons-ios",
+            exact: "1.6.3"
         ),
     ],
     targets: [
@@ -41,7 +40,7 @@ let package = Package(
         .target(
             name: "ModernDesignExtensions",
             dependencies: [
-                .product(name: "SwiftCommonsLang", package: "SwiftCommons"),
+                .product(name: "SwiftCommonsLang", package: "swift-commons-ios"),
             ],
             path: "Modules/RoxieMobile.ModernDesign/Sources/Extensions/Sources"
         ),

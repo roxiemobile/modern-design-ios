@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift",
+      "state" : {
+        "revision" : "12f2389aca4a07e0dd54c86ec23d0721ed88b8db",
+        "version" : "1.4.3"
+      }
+    },
+    {
+      "identity" : "swift-commons-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roxiemobile/swift-commons-ios",
+      "state" : {
+        "revision" : "298d9b961e63e59cdaec4f539290e5d21a5da70c",
+        "version" : "1.6.3"
+      }
+    }
+  ],
+  "version" : 2
+}
